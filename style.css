@@ -1,0 +1,256 @@
+/* html {
+  height: 100%;
+  width: 100%;
+} */
+
+/*
+  Add style rules for the body of a your webpage.
+  Note: These rules will be applied to all elements.
+*/
+body {
+
+  /* Add a background color or image */
+  background: darkgray;
+  /* background-color: white; */
+  background-image: url('');
+
+  /* Customize the font, size, and color for text*/
+  font-family: "Times New Roman";
+  font-size: 20px;
+  color: black;
+
+  /* Adjust the padding and margins */
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  margin-right: 0; 
+  margin-left: 0;  
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 120px;
+  min-width: 250px;
+}
+
+/* Part 1: Navbar */
+
+/* General style rule set for all items in ul */
+.navbar {
+  display: flex;
+
+  margin-bottom: 20px;
+  background-color: #0039a6;
+  padding-left: 10px; 
+  padding-right: 20px; /*how far left the theme button is*/
+
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-left: -50px;
+  margin-top: -20px;
+}
+
+/* Style rule set for individual li */
+.navbar ul li {
+  margin: 10px;
+  background-color: lightblue;
+  padding: 8px;
+}
+
+.navbar li {
+  list-style-type: none;
+}
+
+
+/* Style rule set for individual li link */
+.navbar ul li a {
+  font-family: Arial;
+  color: black;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+/* Style rule set for hovered link */
+.navbar ul li a:hover {
+  font-weight: bold;
+}
+
+
+/* Part 2: Flexbox */
+
+/*
+  Style Text: Add style rules for any headings (h1-6),
+  paragraphs and links
+*/
+
+img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+
+
+
+#improve{
+  margin-bottom: -15px;
+}
+
+h1.title {
+  color: cyan;
+}
+
+/* h2 {
+  text-align: center;
+} */
+
+/* h3 {
+  margin: auto 10px;
+} */
+
+h3.important {
+  font-size: 35px;
+  font-weight: 900;
+}
+
+p {
+  font-size: 23px;
+  /* margin: auto 10px; */
+}
+
+#data {
+  margin-top: 30px;
+}
+
+a:link {
+  color: blue
+}
+
+a:visited {
+  color: blue
+}
+
+a:hover {
+  color: purple;
+}
+
+a:active {
+  color: green;
+}
+
+.header-container {
+  background-color: lightblue;
+  padding-top: 12px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+  min-width: 430px;
+  flex-wrap: wrap-reverse;
+}
+
+.header-item:nth-of-type(1) {
+  margin-left: 10px; 
+  width: 50%;
+  min-width: 410px;
+}
+
+.header-item:nth-of-type(2) {
+  margin-left: 25px;
+  /* width: 50%; */
+}
+
+#header-img {
+  margin-left: -15px;
+  margin-right: 5px; 
+}
+
+.header-button {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  background-color: #008CBA;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 30px 32px;
+  cursor: pointer;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 99.99%;
+  background-color: lightblue;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  margin: 10px;
+}
+
+/* Add style to button */
+#theme-button {
+  padding: 12px;
+  background-color: #4CAF50;
+  border: solid black;
+}
+
+
+/* Customize Dark Mode Theme */
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.what-is{
+  width: 50%;
+}
+#About,#about-text, #about-videos{
+  margin-left: 10px;
+}
+
+#about-text{
+  /* border: 3px solid red; */
+  margin-top: -25px;
+  /* width: 400px; */
+  font-size: 25px;
+  margin-bottom: 10px;
+  min-width: 410px;
+}
+
+#about-videos{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.petition-container{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100;
+  padding-bottom: 50px;
+}
+
+.petition-para{
+  width: 55%;
+  padding-right: 10px;
+}
+
+.signatures{
+  width: 45%;
+  padding-right: 10px;
+}
