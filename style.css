@@ -5,17 +5,16 @@
 
 /*
   Add style rules for the body of a your webpage.
-  Note: These rules will be applied to all elements.
+  Note: These rules will be applied to all elements within the body tag.
 */
 body {
-
   /* Add a background color or image */
   background: darkgray;
   /* background-color: white; */
-  background-image: url('');
+  background-image: url("");
 
   /* Customize the font, size, and color for text*/
-  font-family: "Times New Roman";
+  font-family: "Times New Roman", sans-serif;
   font-size: 20px;
   color: black;
 
@@ -23,8 +22,8 @@ body {
   padding-top: 0;
   padding-left: 0;
   padding-right: 0;
-  margin-right: 0; 
-  margin-left: 0;  
+  margin-right: 0;
+  margin-left: 0;
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 120px;
@@ -39,10 +38,10 @@ body {
 
   margin-bottom: 20px;
   background-color: #0039a6;
-  padding-left: 10px; 
+  padding-left: 10px;
   padding-right: 20px; /*how far left the theme button is*/
 
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -59,6 +58,7 @@ body {
 /* Style rule set for individual li */
 .navbar ul li {
   margin: 10px;
+  margin-left: 10px;
   background-color: lightblue;
   padding: 8px;
 }
@@ -66,7 +66,6 @@ body {
 .navbar li {
   list-style-type: none;
 }
-
 
 /* Style rule set for individual li link */
 .navbar ul li a {
@@ -81,37 +80,21 @@ body {
   font-weight: bold;
 }
 
-
-/* Part 2: Flexbox */
-
-/*
-  Style Text: Add style rules for any headings (h1-6),
-  paragraphs and links
-*/
-
 img {
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
   height: auto;
 }
 
-
-
-#improve{
+#improve {
   margin-bottom: -15px;
+  font-weight: 600;
+  font-size: 40px;
 }
 
 h1.title {
   color: cyan;
 }
-
-/* h2 {
-  text-align: center;
-} */
-
-/* h3 {
-  margin: auto 10px;
-} */
 
 h3.important {
   font-size: 35px;
@@ -128,11 +111,11 @@ p {
 }
 
 a:link {
-  color: blue
+  color: blue;
 }
 
 a:visited {
-  color: blue
+  color: blue;
 }
 
 a:hover {
@@ -156,19 +139,18 @@ a:active {
 }
 
 .header-item:nth-of-type(1) {
-  margin-left: 10px; 
+  margin-left: 10px;
   width: 50%;
   min-width: 410px;
 }
 
 .header-item:nth-of-type(2) {
   margin-left: 25px;
-  /* width: 50%; */
 }
 
 #header-img {
   margin-left: -15px;
-  margin-right: 5px; 
+  margin-right: 5px;
 }
 
 .header-button {
@@ -177,7 +159,7 @@ a:active {
 }
 
 button {
-  background-color: #008CBA;
+  background-color: #008cba;
   color: white;
   font-size: 16px;
   text-align: center;
@@ -204,10 +186,9 @@ button {
 /* Add style to button */
 #theme-button {
   padding: 12px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   border: solid black;
 }
-
 
 /* Customize Dark Mode Theme */
 .dark-mode {
@@ -215,14 +196,16 @@ button {
   color: white;
 }
 
-.what-is{
+.what-is {
   width: 50%;
 }
-#About,#about-text, #about-videos{
+#About,
+#about-text,
+#about-videos {
   margin-left: 10px;
 }
 
-#about-text{
+#about-text {
   /* border: 3px solid red; */
   margin-top: -25px;
   /* width: 400px; */
@@ -231,26 +214,46 @@ button {
   min-width: 410px;
 }
 
-#about-videos{
+#about-videos {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-.petition-container{
+.petition,
+.recent-news {
+  margin-left: 10px;
+}
+
+.petition-container {
   display: flex;
   flex-direction: row;
   gap: 20px;
   width: 100;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
+  margin-top: 15px;
 }
 
-.petition-para{
+.petition-para {
   width: 55%;
   padding-right: 10px;
+  font-size: 23px;
 }
 
-.signatures{
+input {
+  display: block;
+  margin: 10px 0px;
+  padding: 10px 100px;
+  font-size: 24px;
+}
+
+#sign-now-button {
+  padding: 10px 50px;
+  background-color: #4caf50;
+  border: none;
+}
+
+.signatures {
   width: 45%;
   padding-right: 10px;
 }

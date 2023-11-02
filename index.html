@@ -125,8 +125,8 @@
       <div class="petition-container">
         <div class="petition-para">
           Dear Maryland State Representatives, <br />
-          We,residents of Maryland,are concerned about the digital literacy gap
-          in our communities and in the United States. Our digital literacy
+          We, residents of Maryland, are concerned about the digital literacy
+          gap in our communities and in the United States. Our digital literacy
           skills are essential for our ability to participate in society and
           succeed in our communities. Data shows that digital literacy gaps are
           increasing in areas such as education, healthcare, and employment. To
@@ -143,41 +143,52 @@
           <p>🖊️ DJ from Towson supports this.</p>
           <p>🖊️ Amy from Salisbury supports this.</p>
           <p>🖊️ Teresa from Rockville supports this.</p>
+          <p id="counter">
+            🖊️ 3 people have signed this petition and support this cause.
+          </p>
         </div>
       </div>
 
       <!--- Sign Petition Form --->
       <form id="sign-petition" title="sign-petition">
-        <!-- inputs go here -->
-      </form>
+        <label for="name">Name</label>
+        <input type="text" id="name" required />
 
-      <!--- Sign Now Button --->
-      <button id="sign-now-button">Sign Now</button>
+        <label for="hometown">Hometown</label>
+        <input type="text" id="hometown" required />
+
+        <label for="email">Email (Optional) </label>
+        <input type="text" id="email" />
+
+        <button type="submit" id="sign-now-button">Sign Now</button>
+      </form>
     </div>
 
     <!--- News --->
-    <!--this will help with a stretch goal, if you do not want to incorporate this, then leave it alone :)-->
-    <h2 id="news">Recent News</h2>
-
-    <a
-      class=""
-      href="https://www.edweek.org/teaching-learning/schools-are-teaching-digital-literacy-and-citizenship-but-are-they-doing-it-right/2023/07"
-    >
-      <article>
-        <h3>
-          Schools Are Teaching Digital Literacy and Citizenship. But Are They
-          Doing It Right?
-        </h3>
-      </article>
-    </a>
-    <a
-      class=""
-      href="https://apnews.com/article/misinformation-education-election-vaccine-canada-finland-e7d6eed63f3db289bf887605c99ab5c5"
-    >
-      <article>
-        <h3>Digital literacy: Can the republic ‘survive an algorithm’?</h3>
-      </article>
-    </a>
+    <div class="recent-news">
+      <h2>Recent News</h2>
+      <a
+        class=""
+        href="https://www.edweek.org/teaching-learning/schools-are-teaching-digital-literacy-and-citizenship-but-are-they-doing-it-right/2023/07"
+        target="_blank"
+      >
+        <article>
+          <h3>
+            Schools Are Teaching Digital Literacy and Citizenship. But Are They
+            Doing It Right?
+          </h3>
+        </article>
+      </a>
+      <a
+        class=""
+        href="https://apnews.com/article/misinformation-education-election-vaccine-canada-finland-e7d6eed63f3db289bf887605c99ab5c5"
+        target="_blank"
+      >
+        <article>
+          <h3>Digital literacy: Can the republic ‘survive an algorithm’?</h3>
+        </article>
+      </a>
+    </div>
 
     <div class="footer">
       <a href="#">Back to Top </a>
