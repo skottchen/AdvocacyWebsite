@@ -1,13 +1,22 @@
 // TODO: Query for button with an id "theme-button"
 
 let themeButton = document.getElementById("theme-button");
+let improveText = document.getElementById("improve");
+let headerText = document.getElementById("header-text");
+let headerContainer = document.querySelector(".header-container");
 
-// TODO: Complete the toggleDarkMode function
 const toggleDarkMode = () => {
   document.body.classList.toggle("dark-mode");
+  if (document.body.classList.contains("dark-mode")) {
+    headerContainer.style.backgroundColor = "black";
+  } else{
+    headerContainer.style.backgroundColor = "lightblue";
+  }
 }
 
 themeButton.addEventListener("click", toggleDarkMode);
+
+//position cursor at beginning of input field
 
 // Add your query for the sign now button here
 const form = document.getElementById("sign-petition")
@@ -50,5 +59,4 @@ const addSignature = (event) => {
 // Add a click event listener to the sign now button here
 form.addEventListener('submit', addSignature);
 
-// functionality to start keeping a count of total signatures
 
