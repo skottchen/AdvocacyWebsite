@@ -1,5 +1,3 @@
-// TODO: Query for button with an id "theme-button"
-
 let themeButton = document.getElementById("theme-button");
 let improveText = document.getElementById("improve");
 let headerText = document.getElementById("header-text");
@@ -9,21 +7,19 @@ const toggleDarkMode = () => {
   document.body.classList.toggle("dark-mode");
   if (document.body.classList.contains("dark-mode")) {
     headerContainer.style.backgroundColor = "black";
-  } else{
+  } else {
     headerContainer.style.backgroundColor = "lightblue";
   }
 }
 
 themeButton.addEventListener("click", toggleDarkMode);
 
-//position cursor at beginning of input field
+const form = document.getElementById("sign-petition")
 
 // Add your query for the sign now button here
-const form = document.getElementById("sign-petition")
 let count = 3;
 
-const addSignature = (event) => {
-  event.preventDefault();
+const addSignature = () => {
 
   let name = document.getElementById('name').value;
   let hometown = document.getElementById('hometown').value;
@@ -49,14 +45,43 @@ const addSignature = (event) => {
 
   // Append the new counter to the signatures div
   signed.appendChild(counterElement);
-
-  // Clear input fields
-  document.getElementById('name').value = '';
-  document.getElementById('hometown').value = '';
 }
 
+const email = document.getElementById('email');
 
-// Add a click event listener to the sign now button here
-form.addEventListener('submit', addSignature);
+const validateForm = (event) => {
+
+  let containsErrors = false;
+
+  let petitionInputs = form.elements;
+
+  for (let i = 0; i < petitionInputs.length - 1; i++) {
+    if (petitionInputs[i].value.length < 2) {
+      petitionInputs[i].classList.add('error');
+      containsErrors = true;
+    } else {
+      petitionInputs[i].classList.remove('error');
+    }
+  }
+
+  if (!email.value.includes('.com')) {
+    containsErrors = true;
+    email.classList.add('error');
+  } else {
+    email.classList.remove('error');
+  }
+
+  if (!containsErrors) {
+    addSignature();
+    for (let i = 0; i < petitionInputs.length; i++) {
+      petitionInputs[i].value = "";
+    }
+  }
+
+  event.preventDefault();
+}
+
+form.addEventListener('submit', validateForm);
+
 
 
