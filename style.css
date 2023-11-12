@@ -26,7 +26,7 @@ body {
   margin-left: 0;
   margin-top: 0;
   margin-bottom: 0;
-  padding-bottom: 120px;
+  padding-bottom: 0px;
   min-width: 250px;
 }
 
@@ -98,7 +98,7 @@ h1.title {
 
 h3.important {
   font-size: 35px;
-  font-weight: 900;
+  margin-bottom: -5px;
 }
 
 p {
@@ -168,12 +168,12 @@ button {
 }
 
 .footer {
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   bottom: 0;
   width: 99.99%;
   background-color: lightblue;
-  height: 100px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,7 +187,7 @@ button {
 #theme-button {
   padding: 12px;
   background-color: #4caf50;
-  border: solid black;
+  border: none;
 }
 
 /* Customize Dark Mode Theme */
@@ -216,12 +216,11 @@ button {
 
 #about-videos {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
 }
 
 .petition,
-.recent-news {
+#recent-news {
   margin-left: 10px;
 }
 
@@ -261,9 +260,26 @@ input {
 }
 
 /*highlights form box with invalid input in red*/
-.error { 
+.error {
   border-style: solid;
   border-width: 2px;
   border-color: red;
-  background:pink;
+  background: pink;
+}
+
+.impact-container {
+  margin-left: 10px;
+}
+
+/*Unit 8: Project Part 8 (Implementing Website Animations)*/
+.revealable {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 3s ease;
+}
+
+.active {
+  transform: translateY(0px);
+  opacity: 1;
 }

@@ -83,5 +83,34 @@ const validateForm = (event) => {
 
 form.addEventListener('submit', validateForm);
 
+//Unit 8: Project Part 8 (Implementing Website Animations)
+let animation = {
+  revealDistance: 150,
+  initialOpacity: 0,
+  transitionDelay: 0,
+  transitionDuration: '2s',
+  transitionProperty: 'all',
+  transitionTimingFunction: 'ease'
+}
+
+let revealableContainers = document.querySelectorAll(".revealable")
+
+const reveal = () => {
+  for (let i = 0; i < revealableContainers.length; i++) {
+    let windowHeight = window.innerHeight;
+    let topOfRevealableContainer = revealableContainers[i].getBoundingClientRect().top;
+    if (topOfRevealableContainer < windowHeight - animation.revealDistance) {
+      console.log(topOfRevealableContainer);
+      revealableContainers[i].classList.add('active');
+    } else {
+      revealableContainers[i].classList.remove('active');
+    }
+  }
+}
+
+window.addEventListener('scroll', reveal)
+
+
+
 
 

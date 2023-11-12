@@ -11,9 +11,9 @@
       <div>
         <h1 class="title">Digital Literacy Academy</h1>
         <ul>
-          <li><a href="#About">About</a></li>
-          <li><a href="#data">Data</a></li>
+          <li><a href="#About">What is Digital Literacy?</a></li>
           <li><a href="#impact">Impact</a></li>
+          <li><a href="#petition">Petition</a></li>
           <li><a href="#recent-news">Recent News</a></li>
         </ul>
       </div>
@@ -49,7 +49,7 @@
       </div>
     </div>
 
-    <div class="what-is">
+    <div class="what-is revealable">
       <h2 id="About">What is Digital Literacy?</h2>
 
       <div id="about-text">
@@ -59,63 +59,58 @@
         individuals to access information, communicate effectively, and
         participate fully in the digital economy.
       </div>
-    </div>
-
-    <div id="about-videos">
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/p2k3C-iB88w?si=YiAWNwLWmnXSR_Xn"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/cf4DZiw6r9E?si=CVy6pLOAtgXoXiAR"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
+      <div id="about-videos">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/p2k3C-iB88w?si=YiAWNwLWmnXSR_Xn"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/cf4DZiw6r9E?si=CVy6pLOAtgXoXiAR"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
 
     <!--- About --->
 
-    <!--- Data --->
-    <div>
-      <h2 id="data">Data about my topic</h2>
+    <!--- Impact --->
+    <div class="impact-container revealable">
+      <h2 id="impact">Impact!</h2>
+      <img src="images/decisions.jpg" alt="decisions" />
+      <h3 class="important">
+        Our digital literacy skills can affect the decisions we make everyday at
+        home, work, and everywhere we go.
+      </h3>
+      <p>
+        People with low levels of digital literacy are more likely to believe
+        misinformation they see online and then implement that misinformation
+        into their own lives.
+      </p>
+
+      <img src="images/interaction.jpg" alt="interaction" />
+      <h3 class="important">
+        Our digital literacy skills can affect our interactions with others.
+      </h3>
+      <p>
+        A significant amount of our interactions these days are online. People
+        with high digital literacy skills are more likely to be respectful to
+        others online as well as think critically about what others say and post
+        online.
+      </p>
     </div>
 
-    <!--- Impact --->
-    <h2 id="impact">Impact!</h2>
-
-    <img src="images/decisions.jpg" alt="decisions" />
-    <h3 class="important">
-      Our digital literacy skills can affect the decisions we make everyday at
-      home, work, and everywhere we go.
-    </h3>
-    <p>
-      People with low levels of digital literacy are more likely to believe
-      misinformation they see online and then implement that misinformation into
-      their own lives.
-    </p>
-
-    <img src="images/interaction.jpg" alt="interaction" />
-    <h3>
-      Our digital literacy skills can affect our interactions with others.
-    </h3>
-    <p>
-      A significant amount of our interactions these days are online. People
-      with high digital literacy skills are more likely to be respectful to
-      others online as well as think critically about what others say and post
-      online.
-    </p>
-
     <!-- Petition -->
-    <div class="petition" id="petition">
+    <div class="petition revealable" id="petition">
       <h2>Sign Our Petition 📢</h2>
       <img src="images/DL_statistic.jpg" alt="statistics" />
       <div class="petition-container">
@@ -150,7 +145,7 @@
         <input type="text" id="name" />
 
         <label for="hometown">Hometown</label>
-        <input type="text" id="hometown"/>
+        <input type="text" id="hometown" />
 
         <label for="email">Email (Optional) </label>
         <input type="text" id="email" />
@@ -160,7 +155,7 @@
     </div>
 
     <!--- News --->
-    <div id="recent-news">
+    <div id="recent-news" class="revealable">
       <h2>Recent News</h2>
       <a
         class=""
