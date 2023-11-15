@@ -84,6 +84,8 @@ const validateForm = (event) => {
 form.addEventListener('submit', validateForm);
 
 //Unit 8: Project Part 8 (Implementing Website Animations)
+let reduceMotionButton = document.getElementById("reduce-motion-button")
+
 let animation = {
   revealDistance: 150,
   initialOpacity: 0,
@@ -96,11 +98,11 @@ let animation = {
 let revealableContainers = document.querySelectorAll(".revealable")
 
 const reveal = () => {
+
   for (let i = 0; i < revealableContainers.length; i++) {
     let windowHeight = window.innerHeight;
     let topOfRevealableContainer = revealableContainers[i].getBoundingClientRect().top;
     if (topOfRevealableContainer < windowHeight - animation.revealDistance) {
-      console.log(topOfRevealableContainer);
       revealableContainers[i].classList.add('active');
     } else {
       revealableContainers[i].classList.remove('active');
@@ -108,9 +110,6 @@ const reveal = () => {
   }
 }
 
-window.addEventListener('scroll', reveal)
-
-
-
+window.addEventListener('scroll', reveal);
 
 

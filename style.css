@@ -35,12 +35,10 @@ body {
 /* General style rule set for all items in ul */
 .navbar {
   display: flex;
-
   margin-bottom: 20px;
   background-color: #0039a6;
   padding-left: 10px;
   padding-right: 20px; /*how far left the theme button is*/
-
   justify-content: space-between;
   align-items: center;
 }
@@ -168,12 +166,12 @@ button {
 }
 
 .footer {
-  /* position: fixed; */
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 99.99%;
   background-color: lightblue;
-  height: 150px;
+  height: 125px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -188,6 +186,8 @@ button {
   padding: 12px;
   background-color: #4caf50;
   border: none;
+  /* margin-right: 25px; */
+  margin-bottom: 18px;
 }
 
 /* Customize Dark Mode Theme */
@@ -222,6 +222,10 @@ button {
 .petition,
 #recent-news {
   margin-left: 10px;
+}
+
+#recent-news {
+  padding-bottom: 125px;
 }
 
 .petition-container {
