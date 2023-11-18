@@ -14,19 +14,14 @@ const toggleDarkMode = () => {
 
 themeButton.addEventListener("click", toggleDarkMode);
 
-const form = document.getElementById("sign-petition")
-
 // Add your query for the sign now button here
 let count = 3;
 
-const addSignature = () => {
-
-  let name = document.getElementById('name').value;
-  let hometown = document.getElementById('hometown').value;
+const addSignature = (person) => {
   // Add signature to the list
   const signed = document.querySelector(".signatures");
   const newSig = document.createElement("p");
-  newSig.textContent = "🖊️ " + name + " from " + hometown + " supports this.";
+  newSig.textContent = `🖊️ ${person.name} from ${person.hometown} supports this cause.`;
   signed.appendChild(newSig);
 
   // Update the signature count
@@ -47,6 +42,39 @@ const addSignature = () => {
   signed.appendChild(counterElement);
 }
 
+//Unit 9: Animated Modal
+let modal = document.getElementById("thanks-modal");
+let modalContent = document.getElementById("thanks-modal-content");
+const toggleModal = (person) => {
+  let intervalId = setInterval(scaleImage, 500);
+  modal.style.display = "flex";
+  modalContent.textContent = `Thank you so much ${person.name} for signing the petition!`
+  setTimeout(() => {
+    modal.style.display = "none";
+    clearInterval(intervalId);
+  }, 5000)
+}
+
+let closeModalButton = document.getElementById("close-modal");
+const closeModal = () => {
+  modal.style.display = "none";
+}
+
+closeModalButton.addEventListener("click", closeModal);
+
+let scaleFactor = 1;
+let modalImage = document.getElementById("modal-image");
+
+const scaleImage = () => {
+  if (scaleFactor === 1) {
+    scaleFactor = 0.8
+  } else {
+    scaleFactor = 1;
+  }
+  modalImage.style.transform = modalImage.style.transform = `scale(${scaleFactor})`;
+}
+
+const form = document.getElementById("sign-petition")
 const email = document.getElementById('email');
 
 const validateForm = (event) => {
@@ -54,6 +82,13 @@ const validateForm = (event) => {
   let containsErrors = false;
 
   let petitionInputs = form.elements;
+
+  //person object
+  let person = {
+    name: petitionInputs[0].value,
+    hometown: petitionInputs[1].value,
+    email: petitionInputs[2].value,
+  }
 
   for (let i = 0; i < petitionInputs.length - 1; i++) {
     if (petitionInputs[i].value.length < 2) {
@@ -72,7 +107,8 @@ const validateForm = (event) => {
   }
 
   if (!containsErrors) {
-    addSignature();
+    addSignature(person);
+    toggleModal(person);
     for (let i = 0; i < petitionInputs.length; i++) {
       petitionInputs[i].value = "";
     }
@@ -82,6 +118,7 @@ const validateForm = (event) => {
 }
 
 form.addEventListener('submit', validateForm);
+
 
 //Unit 8: Project Part 8 (Implementing Website Animations)
 let reduceMotionButton = document.getElementById("reduce-motion-button")
