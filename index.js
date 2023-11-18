@@ -127,7 +127,7 @@ let animation = {
   revealDistance: 150,
   initialOpacity: 0,
   transitionDelay: 0,
-  transitionDuration: '2s',
+  transitionDuration: '4s',
   transitionProperty: 'all',
   transitionTimingFunction: 'ease'
 }

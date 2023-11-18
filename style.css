@@ -67,7 +67,7 @@ body {
 
 /* Style rule set for individual li link */
 .navbar ul li a {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   color: black;
   font-size: 25px;
   text-decoration: none;
@@ -163,6 +163,10 @@ button {
   text-align: center;
   padding: 30px 32px;
   cursor: pointer;
+}
+
+#assess, #download{
+  border:3px solid black;
 }
 
 .footer {
